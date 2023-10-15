@@ -5,42 +5,42 @@
 class Knox < Formula
   desc ""
   homepage "https://github.com/rag594/homebrew-tap"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rag594/kong-spec-generator/releases/download/v0.0.4/kong-spec-generator_Darwin_x86_64.tar.gz"
-      sha256 "a09c0157f52785f5bf65ebaf2575dec4cb07903de32375d0b5d8b5dd52d0e974"
+    if Hardware::CPU.arm?
+      url "https://github.com/rag594/knox/releases/download/v0.0.5/knox_Darwin_arm64.tar.gz"
+      sha256 "08cc9c3cb8099964c4421584c5d7181a5b53d94bce442ed9d261f2f4b73ade86"
 
       def install
-        bin.install "kong-spec-generator"
+        bin.install "knox"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rag594/kong-spec-generator/releases/download/v0.0.4/kong-spec-generator_Darwin_arm64.tar.gz"
-      sha256 "2290340bdb98fcf9720886c6367dac265dbd65febc6a27789f82ef98dd6c8712"
+    if Hardware::CPU.intel?
+      url "https://github.com/rag594/knox/releases/download/v0.0.5/knox_Darwin_x86_64.tar.gz"
+      sha256 "9c25acb03f22c5c1574d56d2020b69f66189defcbc250159805324dda0184e39"
 
       def install
-        bin.install "kong-spec-generator"
+        bin.install "knox"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rag594/kong-spec-generator/releases/download/v0.0.4/kong-spec-generator_Linux_x86_64.tar.gz"
-      sha256 "4d03ac389f21158454dff9cec38a24ec599483fd552e95c75ef2ac4672374cfc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rag594/knox/releases/download/v0.0.5/knox_Linux_arm64.tar.gz"
+      sha256 "8d7f03b86f94df3c3c3d9618a385eab13af8b50cd77e7691d83e6758c051624b"
 
       def install
-        bin.install "kong-spec-generator"
+        bin.install "knox"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rag594/kong-spec-generator/releases/download/v0.0.4/kong-spec-generator_Linux_arm64.tar.gz"
-      sha256 "4bb343f0a4e14b857b99169cf4afa3e79f8ab5da72c7ea55f1a896f81bf3df54"
+    if Hardware::CPU.intel?
+      url "https://github.com/rag594/knox/releases/download/v0.0.5/knox_Linux_x86_64.tar.gz"
+      sha256 "e70c0e7612f8a3aeb05b10d71b54c505159db88b59712768e171476af4debe82"
 
       def install
-        bin.install "kong-spec-generator"
+        bin.install "knox"
       end
     end
   end
