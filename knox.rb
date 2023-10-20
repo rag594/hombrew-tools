@@ -5,20 +5,20 @@
 class Knox < Formula
   desc ""
   homepage "https://github.com/rag594/homebrew-tap"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rag594/knox/releases/download/v0.1.7/knox_Darwin_x86_64.tar.gz"
-      sha256 "4957d1a7cacb6dcae22b6bdca9bbfc6cc076250387581b5b87ecc496a9a6962d"
+      url "https://github.com/rag594/knox/releases/download/v0.1.8/knox_Darwin_x86_64.tar.gz"
+      sha256 "8c3819d9d39ff137a7849804cac8e96a61ed981f4a47cae0736f39431451874e"
 
       def install
         bin.install "knox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rag594/knox/releases/download/v0.1.7/knox_Darwin_arm64.tar.gz"
-      sha256 "f4bbd3128eac3d5b53b51b4541e8316960049bbf6d8cae25e17e34a341a14a7c"
+      url "https://github.com/rag594/knox/releases/download/v0.1.8/knox_Darwin_arm64.tar.gz"
+      sha256 "f82c7a2fd38a27fda9a8e0b78f8484a87b1c502736e2cbb469aff48a2dcb68fd"
 
       def install
         bin.install "knox"
@@ -28,16 +28,16 @@ class Knox < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rag594/knox/releases/download/v0.1.7/knox_Linux_arm64.tar.gz"
-      sha256 "b8a959bbc6252c8c714daf13c2cd1127a6bdbee3a091022a3264d8a7a2ac63cf"
+      url "https://github.com/rag594/knox/releases/download/v0.1.8/knox_Linux_arm64.tar.gz"
+      sha256 "4f45ba7ca60ecf9ca31a599cc88a94824ee2089197d0c11bd9d66b3610f5f499"
 
       def install
         bin.install "knox"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rag594/knox/releases/download/v0.1.7/knox_Linux_x86_64.tar.gz"
-      sha256 "873e573ccee8fee30b6b4622e316166887e7198a0e5a9b6a3323d4b2d36a3234"
+      url "https://github.com/rag594/knox/releases/download/v0.1.8/knox_Linux_x86_64.tar.gz"
+      sha256 "d2cfdbe243f21676adfb4ca90ffd623fb238c1db6c864b8c156d8687f1c15aa0"
 
       def install
         bin.install "knox"
