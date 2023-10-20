@@ -5,20 +5,20 @@
 class Knox < Formula
   desc ""
   homepage "https://github.com/rag594/homebrew-tap"
-  version "0.1.9"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rag594/knox/releases/download/v0.1.9/knox_Darwin_arm64.tar.gz"
-      sha256 "2ff7ef255dc3935f240eb87049177fcf08bd7f239410069dab597f941f82a73c"
+    if Hardware::CPU.intel?
+      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Darwin_x86_64.tar.gz"
+      sha256 "bd46849a585682df207f9dc2a03e9d0791a2e56afeda1ad973b262bea945de48"
 
       def install
         bin.install "knox"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rag594/knox/releases/download/v0.1.9/knox_Darwin_x86_64.tar.gz"
-      sha256 "c7f150e7dd1d537752c0e99799bd7ca4f9014e61655fc2e561283e1219432d87"
+    if Hardware::CPU.arm?
+      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Darwin_arm64.tar.gz"
+      sha256 "70622bfc969606de7a348d28e530098419e4b2e21bdd1b9ecec62df4d3d43934"
 
       def install
         bin.install "knox"
@@ -28,16 +28,16 @@ class Knox < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rag594/knox/releases/download/v0.1.9/knox_Linux_arm64.tar.gz"
-      sha256 "8f0ffceb1845ac4ad231365aefb256f0962fde7f88cf7a15556efa29d776b31e"
+      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Linux_arm64.tar.gz"
+      sha256 "edc1cd6c0bb963232b022289040033801cf1fe62ee95b933f900e630b15f1f15"
 
       def install
         bin.install "knox"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rag594/knox/releases/download/v0.1.9/knox_Linux_x86_64.tar.gz"
-      sha256 "b8b128e8c0b3d3df90946790db1afcfaad23432140eeeffafa4018da3cb9d93c"
+      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Linux_x86_64.tar.gz"
+      sha256 "ed38445100ddb7e7baffc507e034b2dbd4e99906b1d1fb08cbc6823972bd7cdf"
 
       def install
         bin.install "knox"
