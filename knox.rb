@@ -5,20 +5,20 @@
 class Knox < Formula
   desc ""
   homepage "https://github.com/rag594/homebrew-tap"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Darwin_x86_64.tar.gz"
-      sha256 "bd46849a585682df207f9dc2a03e9d0791a2e56afeda1ad973b262bea945de48"
+      url "https://github.com/rag594/knox/releases/download/v0.2.1/knox_Darwin_x86_64.tar.gz"
+      sha256 "66bd7ff3a286692aa8a5d504349e6c61c1c164986ad1d68a423ef3982dffe107"
 
       def install
         bin.install "knox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Darwin_arm64.tar.gz"
-      sha256 "70622bfc969606de7a348d28e530098419e4b2e21bdd1b9ecec62df4d3d43934"
+      url "https://github.com/rag594/knox/releases/download/v0.2.1/knox_Darwin_arm64.tar.gz"
+      sha256 "0fe30e8526a0dac0b24b5fa7967bc90c0e8015e67f58f735d83be2421fdb1b8f"
 
       def install
         bin.install "knox"
@@ -27,17 +27,17 @@ class Knox < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Linux_arm64.tar.gz"
-      sha256 "edc1cd6c0bb963232b022289040033801cf1fe62ee95b933f900e630b15f1f15"
+    if Hardware::CPU.intel?
+      url "https://github.com/rag594/knox/releases/download/v0.2.1/knox_Linux_x86_64.tar.gz"
+      sha256 "868fc4ade8a648320fbf06a715abdb7ddb4f36d6bf64012fba345be4cdf95e14"
 
       def install
         bin.install "knox"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rag594/knox/releases/download/v0.2.0/knox_Linux_x86_64.tar.gz"
-      sha256 "ed38445100ddb7e7baffc507e034b2dbd4e99906b1d1fb08cbc6823972bd7cdf"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rag594/knox/releases/download/v0.2.1/knox_Linux_arm64.tar.gz"
+      sha256 "c2ccbb74b040de98238b0de5c6b83248d09499a7cc8c33b16a6b9079b259f7f9"
 
       def install
         bin.install "knox"
